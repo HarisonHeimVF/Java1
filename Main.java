@@ -1,19 +1,20 @@
 public class Main {
     public static void main(String[] args) {
 
-        Cavalo cavalo = new Cavalo(1.8f, "Marrom", "Puro Sangue");
-        System.out.println("Informações do cavalo:");
-        cavalo.exibirInformacoes();
-        cavalo.comer();
-        cavalo.fugir();
+        ClinicoGeral clinicoGeral = new ClinicoGeral();
+        clinicoGeral.trabalhaNoHospital = true;
+        clinicoGeral.atendeEmCasa = true;
+
+        clinicoGeral.tratarPaciente();
+        clinicoGeral.receitar();
 
         System.out.println();
 
 
-        Leao leao = new Leao(2.1f, "Amarelo", true);
-        System.out.println("Informações do leão:");
-        leao.exibirInformacoes();
-        leao.comer();
-        leao.cacar();
+        Cirurgiao cirurgiao = new Cirurgiao();
+        cirurgiao.trabalhaNoHospital = true;
+
+        cirurgiao.tratarPaciente();
+        cirurgiao.fazerIncisao();
     }
 }
